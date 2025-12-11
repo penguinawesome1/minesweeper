@@ -1,5 +1,3 @@
-#pragma once
-
 #include "ui_builder.hpp"
 
 namespace game::components {
