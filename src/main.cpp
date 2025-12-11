@@ -6,10 +6,10 @@
 auto main() -> int {
   const config::Config config =
       config::builder::ConfigBuilder()
-          .set_counts_from("files/config.cfg")
-          .set_font_path("files/font.ttf")
-          .set_leaderboard_path("files/leaderboard.txt")
-          .add_image_paths_from("files/images")
+          .set_counts_from("../files/config.cfg")
+          .set_font_path("../files/font.ttf")
+          .set_leaderboard_path("../files/leaderboard.txt")
+          .add_image_paths_from("../files/images")
           .set_sq_length(32)
           .build();
 
