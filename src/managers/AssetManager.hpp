@@ -21,7 +21,6 @@ public:
 
 private:
   std::unordered_map<std::string, sf::Texture> textures_;
-  sf::Font font_;
 };
 
 } // namespace managers
