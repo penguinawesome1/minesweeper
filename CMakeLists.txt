@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.20)
 project(minesweeper LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(MINESWEEPER_SOURCES
     src/main.cpp
@@ -30,6 +31,11 @@ add_executable(minesweeper ${MINESWEEPER_SOURCES})
 
 set(SFML_STATIC_LIBRARIES TRUE)
 
-find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
+find_package(SFML 2.5.1 COMPONENTS system window graphics audio REQUIRED)
 
-target_link_libraries(minesweeper PRIVATE SFML::System SFML::Window SFML::Graphics SFML::Audio)
+target_link_libraries(minesweeper PRIVATE
+    sfml-system
+    sfml-window
+    sfml-graphics
+    sfml-audio
+)

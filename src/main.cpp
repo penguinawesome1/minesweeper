@@ -2,6 +2,7 @@
 #include "config/builder/ConfigBuilder.hpp"
 #include "game/Game.hpp"
 #include "welcome/Welcome.hpp"
+#include <SFML/Graphics.hpp>
 
 auto main() -> int {
   const config::Config config =
