@@ -29,6 +29,8 @@ set(MINESWEEPER_SOURCES
 
 add_executable(minesweeper ${MINESWEEPER_SOURCES})
 
+target_compile_definitions(minesweeper PRIVATE SFML_STATIC) 
+
 set(SFML_STATIC_LIBRARIES TRUE)
 find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
 
