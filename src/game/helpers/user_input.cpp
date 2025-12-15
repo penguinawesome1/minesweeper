@@ -54,6 +54,10 @@ void handle_left_click(ClickParams &params) {
 void handle_right_click(ClickParams &params) {
   const sf::Vector2i mouse_pos = sf::Mouse::getPosition(params.window);
 
+  if (params.is_paused) {
+    return;
+  }
+
   if (auto tile = params.board.at(mouse_pos.x / params.config.sq_length,
                                   mouse_pos.y / params.config.sq_length);
       tile->get().is_hidden) {
